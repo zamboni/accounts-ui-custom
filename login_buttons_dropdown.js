@@ -398,6 +398,11 @@
 
     var options = {}; // to be passed to Accounts.createUser
 
+    var displayname = trimmedElementValueById('login-displayname');
+    if (displayname != null) {
+      options.profile = {'displayname' : displayname};
+    }
+    
     var username = trimmedElementValueById('login-username');
     if (username !== null) {
       if (!Accounts._loginButtons.validateUsername(username))
