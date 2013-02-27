@@ -209,10 +209,6 @@
        visible: function () {
          return Accounts.ui._passwordSignupFields() === "USERNAME_ONLY";
        }},
-      {fieldName: 'displayname', fieldLabel: 'DisplayName',
-       visible: function () {
-         return Accounts.ui._passwordSignupFields() === "DISPLAYNAME_AND_EMAIL";
-       }},
       {fieldName: 'email', fieldLabel: 'Email', inputType: 'email',
        visible: function () {
          return _.contains(
@@ -232,10 +228,14 @@
            ["USERNAME_AND_EMAIL", "USERNAME_AND_OPTIONAL_EMAIL", "USERNAME_ONLY"],
            Accounts.ui._passwordSignupFields());
        }},
+      {fieldName: 'displayname', fieldLabel: 'DisplayName',
+       visible: function () {
+         return Accounts.ui._passwordSignupFields() === "DISPLAYNAME_AND_EMAIL";
+       }},
       {fieldName: 'email', fieldLabel: 'Email', inputType: 'email',
        visible: function () {
          return _.contains(
-           ["USERNAME_AND_EMAIL", "EMAIL_ONLY"],
+           ["USERNAME_AND_EMAIL", "EMAIL_ONLY", "DISPLAYNAME_AND_EMAIL"],
            Accounts.ui._passwordSignupFields());
        }},
       {fieldName: 'email', fieldLabel: 'Email (optional)', inputType: 'email',
