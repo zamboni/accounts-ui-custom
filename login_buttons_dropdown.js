@@ -279,7 +279,7 @@
 
   Template._loginButtonsLoggedOutPasswordService.showForgotPasswordLink = function () {
     return _.contains(
-      ["USERNAME_AND_EMAIL", "USERNAME_AND_OPTIONAL_EMAIL", "EMAIL_ONLY"],
+      ["USERNAME_AND_EMAIL", "USERNAME_AND_OPTIONAL_EMAIL", "EMAIL_ONLY", "DISPLAYNAME_AND_EMAIL"],
       Accounts.ui._passwordSignupFields());
   };
 
