@@ -9,7 +9,7 @@
 
     {{#if dropdownVisible}}
       <div id="login-dropdown-list" class="accounts-dialog">
-        <a class="login-close-text">Close</a>
+        <a class="login-close-text">&times;</a>
         <div class="login-close-text-clear"></div>
 
         {{#if inMessageOnlyFlow}}
@@ -27,14 +27,15 @@
 </template>
 
 <template name="_loginButtonsLoggedInDropdownActions">
+  <h2>User Management</h2>
   {{#if allowChangingPassword}}
     <div class="login-button" id="login-buttons-open-change-password">
-      Change password
+      <a>Change password</a>
     </div>
   {{/if}}
 
   <div class="login-button" id="login-buttons-logout">
-    Sign out
+    <a class="sign-out-button">Sign out</a>
   </div>
 
   {{> _loginButtonsMessages}}
@@ -50,7 +51,8 @@
           makes the position of "Close" match the position of this text. }}
       <a class="login-link-text" id="login-sign-in-link">Sign in ▾</a>
       <div id="login-dropdown-list" class="accounts-dialog">
-        <a class="login-close-text">Close</a>
+        <h2>Sign in to your Teamput account</h2>
+        <a class="login-close-text">&times;</a>
         {{#if loggingIn}}
           {{> _loginButtonsLoggingIn}}
         {{/if}}
@@ -106,9 +108,9 @@
 
       <div class="login-button login-button-form-submit" id="login-buttons-password">
         {{#if inSignupFlow}}
-          Create account
+          <a>Create account</a>
         {{else}}
-          Sign in
+          <a>Sign in</a>
         {{/if}}
       </div>
 
