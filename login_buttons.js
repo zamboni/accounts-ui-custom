@@ -201,5 +201,13 @@
       return false;
     }
   };
+  Accounts._loginButtons.validateAcceptance = function (acceptance) {
+    if (acceptance) {
+      return true;
+    } else {
+      loginButtonsSession.errorMessage("You must accept the Terms of Service");
+      return false;
+    }
+  }
 
 })();

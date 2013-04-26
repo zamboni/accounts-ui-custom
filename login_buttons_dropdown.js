@@ -429,6 +429,12 @@
     if (!matchPasswordAgainIfPresent())
       return;
 
+    var accepted = document.getElementById("accept-terms").checked;
+    if (!Accounts._loginButtons.validateAcceptance(accepted))
+      return;
+    else
+      options.termsAccepted = accepted;
+    
     Accounts.createUser(options, function (error) {
       if (error) {
         loginButtonsSession.errorMessage(error.reason || "Unknown error");

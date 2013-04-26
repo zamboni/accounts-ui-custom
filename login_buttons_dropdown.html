@@ -105,6 +105,12 @@
       {{/each}}
 
       {{> _loginButtonsMessages}}
+      
+      {{#if inSignupFlow}}
+        <div class='accept-terms-section'>
+          <input type="checkbox" id="accept-terms">Accept the <a href="http://14falcons.com/teamput-terms-of-service" target="_blank" >Terms of Service</a></input>
+        </div>
+      {{/if}}
 
       <div class="login-button login-button-form-submit" id="login-buttons-password">
         {{#if inSignupFlow}}
