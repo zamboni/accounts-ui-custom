@@ -179,6 +179,10 @@
   Template._loginButtonsLoggedOutDropdown.hasPasswordService = function () {
     return Accounts._loginButtons.hasPasswordService();
   };
+  
+  Template._loginButtonsLoggedOutDropdown.inSignupFlow = function () {
+    return loginButtonsSession.get('inSignupFlow');
+  };
 
   // return all login services, with password last
   Template._loginButtonsLoggedOutAllServices.services = function () {
