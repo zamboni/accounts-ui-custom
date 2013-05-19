@@ -55,7 +55,11 @@
           <h2>Sign up for your free 30 day trial.</h2>
           <p>No credit card required</p>
         {{else}}
-          <h2>Sign In</h2>
+          {{#if inForgotPasswordFlow}}
+            <h2>Forgot Password</h2>
+          {{else}}
+            <h2>Sign In</h2>
+          {{/if}}
         {{/if}}
         <a class="login-close-text">&times;</a>
         {{#if loggingIn}}

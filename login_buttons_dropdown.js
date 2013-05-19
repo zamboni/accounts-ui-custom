@@ -184,6 +184,10 @@
     return loginButtonsSession.get('inSignupFlow');
   };
 
+  Template._loginButtonsLoggedOutDropdown.inForgotPasswordFlow = function () {
+    return loginButtonsSession.get('inForgotPasswordFlow');
+  };
+
   // return all login services, with password last
   Template._loginButtonsLoggedOutAllServices.services = function () {
     return Accounts._loginButtons.getLoginServices();
